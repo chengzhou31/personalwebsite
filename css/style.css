@@ -1,0 +1,440 @@
+/* ============================================================
+   style.css
+   Terminal portfolio — all sizes scaled ×1.5 from base
+   ============================================================ */
+
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Design tokens ──────────────────────────────────────── */
+:root {
+  --bg:        #000000;
+  --fg:        #ffffff;
+  --dim:       #888888;
+  --border:    #333333;
+  --sidebar-w: 300px;          /* was 220px — widened for larger type */
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-vt:   'VT323', monospace;
+}
+
+/* ── Base ───────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 21px;             /* was 14px × 1.5 */
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+#shell {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+#sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar-header {
+  padding: 36px 30px 27px;     /* was 24px 20px 18px */
+  border-bottom: 1px solid var(--border);
+}
+
+.name {
+  font-family: var(--font-vt);
+  font-size: 42px;             /* was 28px */
+  letter-spacing: 1px;
+  line-height: 1.15;
+}
+
+.title {
+  font-size: 17px;             /* was 11px */
+  color: var(--dim);
+  margin-top: 6px;
+  letter-spacing: 0.4px;
+}
+
+.cwd {
+  margin-top: 18px;            /* was 12px */
+  font-size: 17px;             /* was 11px */
+  color: var(--dim);
+}
+
+.cwd span { color: var(--fg); }
+
+/* ── Nav ────────────────────────────────────────────────── */
+nav {
+  flex: 1;
+  padding: 27px 0;             /* was 18px */
+}
+
+nav ul { list-style: none; }
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;                   /* was 10px */
+  padding: 14px 30px;          /* was 9px 20px */
+  color: var(--dim);
+  text-decoration: none;
+  font-size: 20px;             /* was 13px */
+  letter-spacing: 0.4px;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav ul li a .idx {
+  color: var(--border);
+  font-size: 17px;             /* was 11px */
+  min-width: 24px;             /* was 16px */
+}
+
+nav ul li a:hover {
+  color: var(--fg);
+  border-left-color: var(--fg);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+nav ul li a:hover .idx { color: var(--dim); }
+
+nav ul li a.active {
+  color: var(--fg);
+  border-left-color: var(--fg);
+}
+
+nav ul li a.active .idx { color: var(--fg); }
+
+/* ── Sidebar footer ─────────────────────────────────────── */
+#sidebar-footer {
+  padding: 21px 30px;          /* was 14px 20px */
+  border-top: 1px solid var(--border);
+  font-size: 17px;             /* was 11px */
+}
+
+#sidebar-footer a {
+  display: block;
+  color: var(--dim);
+  text-decoration: none;
+  margin-bottom: 8px;          /* was 5px */
+}
+
+#sidebar-footer a:last-child { margin-bottom: 0; }
+#sidebar-footer a:hover { color: var(--fg); }
+
+/* ── Main content area ──────────────────────────────────── */
+#content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 54px 72px;          /* was 36px 48px */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+#content::-webkit-scrollbar       { width: 4px; }
+#content::-webkit-scrollbar-track { background: transparent; }
+#content::-webkit-scrollbar-thumb { background: var(--border); }
+
+/* ── Sections ───────────────────────────────────────────── */
+.section        { display: none; max-width: 960px; } /* was 740px */
+.section.active { display: block; }
+
+/* ── Section header ─────────────────────────────────────── */
+.sec-header { margin-bottom: 42px; }  /* was 28px */
+
+.breadcrumb {
+  font-size: 17px;             /* was 11px */
+  color: var(--dim);
+  margin-bottom: 12px;         /* was 8px */
+  letter-spacing: 0.4px;
+}
+
+.sec-header h1 {
+  font-family: var(--font-vt);
+  font-size: 66px;             /* was 44px */
+  font-weight: normal;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.rule {
+  height: 1px;
+  background: var(--border);
+  margin-top: 15px;            /* was 10px */
+}
+
+/* ── Prompt line ────────────────────────────────────────── */
+.prompt {
+  font-size: 18px;             /* was 12px */
+  color: var(--dim);
+  margin-bottom: 36px;         /* was 24px */
+}
+
+.prompt::before {
+  content: '$ ';
+  color: var(--fg);
+}
+
+/* ── About — layout ─────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;   /* was 200px */
+  gap: 60px;                   /* was 40px */
+}
+
+/* ── About — bio ────────────────────────────────────────── */
+.bio p {
+  font-size: 20px;             /* was 13px */
+  color: #cccccc;
+  margin-bottom: 21px;         /* was 14px */
+  line-height: 1.7;
+}
+
+.bio p:last-child { margin-bottom: 0; }
+
+.bio a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ── About — stats ──────────────────────────────────────── */
+.stat {
+  padding: 17px 0;             /* was 11px */
+  border-bottom: 1px solid var(--border);
+}
+
+.stat:first-child { border-top: 1px solid var(--border); }
+
+.stat-label {
+  font-size: 15px;             /* was 10px */
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;          /* was 3px */
+}
+
+.stat-value {
+  font-size: 18px;             /* was 12px */
+  color: var(--fg);
+  line-height: 1.4;
+}
+
+/* ── Skills ─────────────────────────────────────────────── */
+.skills { margin-top: 54px; }  /* was 36px */
+
+.skills h2 {
+  font-family: var(--font-vt);
+  font-size: 33px;             /* was 22px */
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: var(--dim);
+  margin-bottom: 21px;         /* was 14px */
+}
+
+.skills h2::before { content: '# '; color: var(--border); }
+
+.skill-row {
+  display: flex;
+  align-items: baseline;
+  gap: 21px;                   /* was 14px */
+  margin-bottom: 15px;         /* was 10px */
+  font-size: 18px;             /* was 12px */
+}
+
+.sk-cat {
+  color: var(--dim);
+  font-size: 17px;             /* was 11px */
+  letter-spacing: 0.4px;
+  min-width: 165px;            /* was 110px */
+}
+
+/* ── Tags (shared) ──────────────────────────────────────── */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }  /* was 5px */
+
+.tag {
+  border: 1px solid var(--border);
+  padding: 2px 10px;           /* was 1px 7px */
+  font-size: 17px;             /* was 11px */
+  color: #cccccc;
+}
+
+/* ── Experience ─────────────────────────────────────────── */
+.exp-item {
+  display: grid;
+  grid-template-columns: 230px 1fr;   /* was 155px */
+  gap: 36px;                   /* was 24px */
+  padding: 36px 0;             /* was 24px */
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:first-child { border-top: 1px solid var(--border); }
+
+.exp-meta { padding-top: 3px; }
+
+.exp-dates {
+  font-size: 17px;             /* was 11px */
+  color: var(--dim);
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;          /* was 5px */
+}
+
+.exp-co { font-size: 18px; }  /* was 12px */
+
+.exp-role {
+  font-family: var(--font-vt);
+  font-size: 35px;             /* was 23px */
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 14px;         /* was 9px */
+  line-height: 1;
+}
+
+.exp-desc {
+  font-size: 18px;             /* was 12px */
+  color: #bbbbbb;
+  margin-bottom: 18px;         /* was 12px */
+  line-height: 1.65;
+}
+
+/* ── Projects ───────────────────────────────────────────── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px;                   /* was 14px */
+}
+
+.proj-card {
+  border: 1px solid var(--border);
+  padding: 27px 30px;          /* was 18px 20px */
+}
+
+.proj-card:hover { border-color: #666; }
+
+.proj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;         /* was 9px */
+}
+
+.proj-name {
+  font-family: var(--font-vt);
+  font-size: 33px;             /* was 22px */
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.proj-link {
+  font-size: 17px;             /* was 11px */
+  color: var(--dim);
+  text-decoration: none;
+  white-space: nowrap;
+  margin-left: 12px;
+  padding-top: 2px;
+}
+
+.proj-link:hover { color: var(--fg); }
+
+.proj-desc {
+  font-size: 18px;             /* was 12px */
+  color: #aaaaaa;
+  margin-bottom: 20px;         /* was 13px */
+  line-height: 1.6;
+}
+
+/* ── Contact ────────────────────────────────────────────── */
+.contact-intro {
+  font-size: 20px;             /* was 13px */
+  color: #bbbbbb;
+  max-width: 600px;            /* was 460px */
+  line-height: 1.7;
+  margin-bottom: 42px;         /* was 28px */
+}
+
+.contact-list { list-style: none; }
+
+.contact-list li { border-bottom: 1px solid var(--border); }
+.contact-list li:first-child { border-top: 1px solid var(--border); }
+
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  gap: 30px;                   /* was 20px */
+  padding: 21px 0;             /* was 14px */
+  text-decoration: none;
+  color: var(--dim);
+}
+
+.contact-list li a:hover { color: var(--fg); }
+
+.c-key {
+  font-size: 17px;             /* was 11px */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  min-width: 135px;            /* was 90px */
+  color: var(--dim);
+}
+
+.c-val { font-size: 20px; }   /* was 13px */
+
+.contact-list li a:hover .c-val { color: var(--fg); }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  html, body { overflow: auto; }
+
+  #shell {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #sidebar {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 18px;
+  }
+
+  nav ul li a {
+    padding: 9px 15px;
+    border-left: none;
+    font-size: 18px;
+  }
+
+  nav ul li a.active {
+    border-left: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  #content {
+    padding: 33px 27px;
+    overflow-y: unset;
+  }
+
+  .about-grid      { grid-template-columns: 1fr; }
+  .proj-grid       { grid-template-columns: 1fr; }
+  .exp-item        { grid-template-columns: 1fr; gap: 6px; }
+}

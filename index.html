@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>your_name ~ terminal</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div id="shell">
+
+  <!-- ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ -->
+  <aside id="sidebar">
+
+    <div id="sidebar-header">
+      <div class="name">Cheng Zhou</div>
+      <div class="title">Software Engineer</div>
+      <div class="cwd"><span>~/portfolio</span> · <span style="color:var(--dim)">main</span></div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a class="nav-link active" data-target="about">    <span class="idx">01</span>about      </a></li>
+        <li><a class="nav-link"        data-target="experience"><span class="idx">02</span>experience </a></li>
+        <li><a class="nav-link"        data-target="projects">  <span class="idx">03</span>projects   </a></li>
+        <li><a class="nav-link"        data-target="contact">   <span class="idx">04</span>contact    </a></li>
+      </ul>
+    </nav>
+
+    <div id="sidebar-footer">
+      <a href="https://github.com/yourusername"      target="_blank">github.com/yourusername</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/you</a>
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main id="content">
+
+    <!-- ── ABOUT ──────────────────────────── -->
+    <section id="about" class="section active">
+
+      <div class="sec-header">
+        <div class="breadcrumb">~/portfolio/about</div>
+        <h1>ABOUT_ME</h1>
+        <div class="rule"></div>
+      </div>
+
+      <div class="prompt">cat about.txt</div>
+
+      <div class="about-grid">
+        <div class="bio">
+          <p>
+            Hi — I'm a software engineer with roots in network and solutions engineering.
+            I build reliable, well-structured systems and care about the full stack: from
+            protocol-level concerns up to the API layer and the interfaces sitting on top.
+          </p>
+          <p>
+            I'm drawn to infrastructure-adjacent software — automation tooling, distributed
+            systems, observability, and developer experience. I like things that are fast,
+            simple to reason about, and easy to operate.
+          </p>
+          <p>
+            Currently open to new roles.
+            <a class="nav-link-inline" data-target="contact">Get in touch →</a>
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">Location</div>
+            <div class="stat-value">City, State</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Focus</div>
+            <div class="stat-value">Backend · Infra · DevOps</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Education</div>
+            <div class="stat-value">B.S. Computer Science<br>University, 20XX</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Status</div>
+            <div class="stat-value">Open to work</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills">
+        <h2>skills</h2>
+        <div class="skill-row">
+          <span class="sk-cat">languages</span>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Go</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Bash</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="sk-cat">infrastructure</span>
+          <div class="tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="sk-cat">networking</span>
+          <div class="tags">
+            <span class="tag">BGP</span>
+            <span class="tag">TCP/IP</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">REST</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="sk-cat">observability</span>
+          <div class="tags">
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">OpenTelemetry</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="sk-cat">data</span>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Kafka</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── EXPERIENCE ──────────────────────── -->
+    <section id="experience" class="section">
+
+      <div class="sec-header">
+        <div class="breadcrumb">~/portfolio/experience</div>
+        <h1>EXPERIENCE</h1>
+        <div class="rule"></div>
+      </div>
+
+      <div class="prompt">cat resume.json | jq '.experience[]'</div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-dates">2023 — present</div>
+          <div class="exp-co">Company Name</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Software Engineer</div>
+          <p class="exp-desc">
+            Description of your role and responsibilities. What systems did you build or own?
+            What was the impact? Keep it concrete and metric-driven where possible.
+          </p>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-dates">2021 — 2023</div>
+          <div class="exp-co">Company Name</div>
+        </div>
+        <div>
+          <div class="exp-role">Solutions Engineer</div>
+          <p class="exp-desc">
+            Pre-sales and post-sales engineering, technical integrations, customer implementations.
+            Frame toward the software and systems side — scripts, tooling, API work.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Terraform</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-dates">2018 — 2021</div>
+          <div class="exp-co">Company Name</div>
+        </div>
+        <div>
+          <div class="exp-role">Network Engineer</div>
+          <p class="exp-desc">
+            Network engineering experience — lean into the automation, scripting, and
+            infrastructure-as-code work you did here. Pull out the software-adjacent achievements.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">BGP</span>
+            <span class="tag">Bash</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────── -->
+    <section id="projects" class="section">
+
+      <div class="sec-header">
+        <div class="breadcrumb">~/portfolio/projects</div>
+        <h1>PROJECTS</h1>
+        <div class="rule"></div>
+      </div>
+
+      <div class="prompt">ls -la ~/projects/</div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <div class="proj-name">project-one</div>
+            <a class="proj-link" href="https://github.com/yourusername/repo" target="_blank">[github ↗]</a>
+          </div>
+          <p class="proj-desc">Short description. What does it do, why did you build it, what problem does it solve?</p>
+          <div class="tags">
+            <span class="tag">Go</span>
+            <span class="tag">CLI</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <div class="proj-name">project-two</div>
+            <a class="proj-link" href="https://github.com/yourusername/repo" target="_blank">[github ↗]</a>
+          </div>
+          <p class="proj-desc">Short description. Focus on the technical decisions and what makes it interesting.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <div class="proj-name">project-three</div>
+            <a class="proj-link" href="https://github.com/yourusername/repo" target="_blank">[github ↗]</a>
+          </div>
+          <p class="proj-desc">Tooling, automation script, open source contribution, or personal experiment.</p>
+          <div class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-top">
+            <div class="proj-name">project-four</div>
+            <a class="proj-link" href="#" target="_blank">[demo ↗]</a>
+          </div>
+          <p class="proj-desc">Infrastructure-as-code, network automation, or observability tooling — great fit given your background.</p>
+          <div class="tags">
+            <span class="tag">Terraform</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Ansible</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────── -->
+    <section id="contact" class="section">
+
+      <div class="sec-header">
+        <div class="breadcrumb">~/portfolio/contact</div>
+        <h1>CONTACT</h1>
+        <div class="rule"></div>
+      </div>
+
+      <div class="prompt">cat contact.txt</div>
+
+      <p class="contact-intro">
+        Open to full-time roles, contract work, and interesting conversations.
+        Best reached by email — I reply within 48 hours.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <a href="mailto:you@email.com">
+            <span class="c-key">email</span>
+            <span class="c-val">you@email.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/yourusername" target="_blank">
+            <span class="c-key">github</span>
+            <span class="c-val">github.com/yourusername</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <span class="c-key">linkedin</span>
+            <span class="c-val">linkedin.com/in/yourusername</span>
+          </a>
+        </li>
+        <li>
+          <a href="/resume.pdf" target="_blank">
+            <span class="c-key">resume</span>
+            <span class="c-val">download resume.pdf</span>
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+</div>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>
