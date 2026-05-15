@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>your_name ~ terminal</title>
+  <title>cheng_zhou ~ terminal</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
     <div id="sidebar-header">
       <div class="name">Cheng Zhou</div>
       <div class="title">Software Engineer</div>
-      <div class="cwd"><span>~/portfolio</span> · <span style="color:var(--dim)">main</span></div>
+      <div class="cwd"><span>~/portfolio</span>
     </div>
 
     <nav>
@@ -38,8 +38,14 @@
     </nav>
 
     <div id="sidebar-footer">
-      <a href="https://github.com/yourusername"      target="_blank">github.com/yourusername</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/you</a>
+      <a href="https://www.linkedin.com/in/cheng-zhou/" target="_blank" rel="noopener" class="contact-link">
+        <img src="assets/linkedin.png" width="14" height="14" alt="LinkedIn" />
+        LinkedIn
+      </a>
+      <a href="https://github.com/chengzhou31" target="_blank" rel="noopener" class="contact-link">
+        <img src="assets/github.svg" width="14" height="14" alt="GitHub" />
+        GitHub
+      </a>
     </div>
 
   </aside>
@@ -81,19 +87,19 @@
         <div class="stats">
           <div class="stat">
             <div class="stat-label">Location</div>
-            <div class="stat-value">City, State</div>
+            <div class="stat-value">Seattle, WA</div>
           </div>
           <div class="stat">
             <div class="stat-label">Focus</div>
-            <div class="stat-value">Backend · Infra · DevOps</div>
+            <div class="stat-value">Backend · Networking · Solutions Engineering</div>
           </div>
           <div class="stat">
             <div class="stat-label">Education</div>
-            <div class="stat-value">B.S. Computer Science<br>University, 20XX</div>
+            <div class="stat-value">B.S. Computer Science<br>University of Colorado Boulder, 2025</div>
           </div>
           <div class="stat">
             <div class="stat-label">Status</div>
-            <div class="stat-value">Open to work</div>
+            <div class="stat-value" id="work">Open to work</div>
           </div>
         </div>
       </div>
@@ -104,18 +110,15 @@
           <span class="sk-cat">languages</span>
           <div class="tags">
             <span class="tag">Python</span>
-            <span class="tag">Go</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Bash</span>
-            <span class="tag">SQL</span>
+            <span class="tag">C/C++</span>
+            <span class="tag">Javascript/Typescript</span>
+            <span class="tag">x86, RISC-V</span>
           </div>
         </div>
         <div class="skill-row">
           <span class="sk-cat">infrastructure</span>
           <div class="tags">
-            <span class="tag">Kubernetes</span>
             <span class="tag">Docker</span>
-            <span class="tag">Terraform</span>
             <span class="tag">AWS</span>
             <span class="tag">Linux</span>
           </div>
@@ -125,16 +128,9 @@
           <div class="tags">
             <span class="tag">BGP</span>
             <span class="tag">TCP/IP</span>
-            <span class="tag">gRPC</span>
-            <span class="tag">REST</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <span class="sk-cat">observability</span>
-          <div class="tags">
-            <span class="tag">Prometheus</span>
-            <span class="tag">Grafana</span>
-            <span class="tag">OpenTelemetry</span>
+            <span class="tag">VXLAN/EVPN</span>
+            <span class="tag">SRv6</span>
+            <span class="tag">SONiC</span>
           </div>
         </div>
         <div class="skill-row">
@@ -142,7 +138,13 @@
           <div class="tags">
             <span class="tag">PostgreSQL</span>
             <span class="tag">Redis</span>
-            <span class="tag">Kafka</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <span class="sk-cat">tools</span>
+          <div class="tags">
+            <span class="tag">Git</span>
+            <span class="tag">Microsoft Office</span>
           </div>
         </div>
       </div>
@@ -162,28 +164,27 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-dates">2023 — present</div>
-          <div class="exp-co">Company Name</div>
+          <div class="exp-dates">Jan 2026 — May 2026</div>
+          <div class="exp-co">Nexthop AI</div>
         </div>
         <div>
-          <div class="exp-role">Senior Software Engineer</div>
+          <div class="exp-role">Software Engineer</div>
           <p class="exp-desc">
             Description of your role and responsibilities. What systems did you build or own?
             What was the impact? Keep it concrete and metric-driven where possible.
           </p>
           <div class="tags">
-            <span class="tag">Go</span>
-            <span class="tag">Kubernetes</span>
-            <span class="tag">gRPC</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">SONiC</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
           </div>
         </div>
       </div>
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-dates">2021 — 2023</div>
-          <div class="exp-co">Company Name</div>
+          <div class="exp-dates">June 2025 — Jan 2026</div>
+          <div class="exp-co">Netceed</div>
         </div>
         <div>
           <div class="exp-role">Solutions Engineer</div>
@@ -192,30 +193,64 @@
             Frame toward the software and systems side — scripts, tooling, API work.
           </p>
           <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">AWS</span>
-            <span class="tag">Terraform</span>
+            <span class="tag">Juniper</span>
+            <span class="tag">Cisco</span>
+            <span class="tag">Arista</span>
+            <span class="tag">HPE</span>
           </div>
         </div>
       </div>
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-dates">2018 — 2021</div>
-          <div class="exp-co">Company Name</div>
+          <div class="exp-dates">August 2024 — May 2025</div>
+          <div class="exp-co">University of Colorado Boulder</div>
         </div>
         <div>
-          <div class="exp-role">Network Engineer</div>
+          <div class="exp-role">Research Assistant</div>
           <p class="exp-desc">
             Network engineering experience — lean into the automation, scripting, and
             infrastructure-as-code work you did here. Pull out the software-adjacent achievements.
           </p>
           <div class="tags">
             <span class="tag">Python</span>
-            <span class="tag">Ansible</span>
-            <span class="tag">BGP</span>
-            <span class="tag">Bash</span>
+            <span class="tag">ML/AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-dates">May 2024 — August 2025</div>
+          <div class="exp-co">Seagate</div>
+        </div>
+        <div>
+          <div class="exp-role">Firmware Engineering Intern</div>
+          <p class="exp-desc">
+            Network engineering experience — lean into the automation, scripting, and
+            infrastructure-as-code work you did here. Pull out the software-adjacent achievements.
+          </p>
+          <div class="tags">
+            <span class="tag">C/C++</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-dates">May 2023 — August 2023</div>
+          <div class="exp-co">Ricoh</div>
+        </div>
+        <div>
+          <div class="exp-role">Software Engineering Intern</div>
+          <p class="exp-desc">
+            Network engineering experience — lean into the automation, scripting, and
+            infrastructure-as-code work you did here. Pull out the software-adjacent achievements.
+          </p>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Javascript</span>
           </div>
         </div>
       </div>
@@ -237,14 +272,13 @@
 
         <div class="proj-card">
           <div class="proj-top">
-            <div class="proj-name">project-one</div>
+            <div class="proj-name">Python to x86 Compiler</div>
             <a class="proj-link" href="https://github.com/yourusername/repo" target="_blank">[github ↗]</a>
           </div>
           <p class="proj-desc">Short description. What does it do, why did you build it, what problem does it solve?</p>
           <div class="tags">
-            <span class="tag">Go</span>
-            <span class="tag">CLI</span>
-            <span class="tag">SQLite</span>
+            <span class="tag">Python</span>
+            <span class="tag">x86 Assembly</span>
           </div>
         </div>
 
@@ -263,14 +297,13 @@
 
         <div class="proj-card">
           <div class="proj-top">
-            <div class="proj-name">project-three</div>
+            <div class="proj-name">HTTP Proxy</div>
             <a class="proj-link" href="https://github.com/yourusername/repo" target="_blank">[github ↗]</a>
           </div>
           <p class="proj-desc">Tooling, automation script, open source contribution, or personal experiment.</p>
           <div class="tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Redis</span>
+            <span class="tag">C/C++</span>
+            <span class="tag">sockets library</span>
           </div>
         </div>
 
@@ -310,23 +343,23 @@
         <li>
           <a href="mailto:you@email.com">
             <span class="c-key">email</span>
-            <span class="c-val">you@email.com</span>
+            <span class="c-val">cheng.sean.zhou@gmail.com</span>
           </a>
         </li>
         <li>
           <a href="https://github.com/yourusername" target="_blank">
             <span class="c-key">github</span>
-            <span class="c-val">github.com/yourusername</span>
+            <span class="c-val">https://github.com/chengzhou31</span>
           </a>
         </li>
         <li>
           <a href="https://linkedin.com/in/yourusername" target="_blank">
             <span class="c-key">linkedin</span>
-            <span class="c-val">linkedin.com/in/yourusername</span>
+            <span class="c-val">https://www.linkedin.com/in/cheng-zhou/</span>
           </a>
         </li>
         <li>
-          <a href="/resume.pdf" target="_blank">
+          <a href="assets/Cheng_Zhou_Resume.pdf" target="_blank">
             <span class="c-key">resume</span>
             <span class="c-val">download resume.pdf</span>
           </a>

@@ -17,8 +17,7 @@
   --dim:       #888888;
   --border:    #333333;
   --sidebar-w: 300px;          /* was 220px — widened for larger type */
-  --font-mono: 'Share Tech Mono', monospace;
-  --font-vt:   'VT323', monospace;
+  --font-mono: 'Ubuntu Mono', monospace;
 }
 
 /* ── Base ───────────────────────────────────────────────── */
@@ -54,7 +53,7 @@ html, body {
 }
 
 .name {
-  font-family: var(--font-vt);
+  font-family: var(--font-mono);
   font-size: 42px;             /* was 28px */
   letter-spacing: 1px;
   line-height: 1.15;
@@ -120,7 +119,7 @@ nav ul li a.active .idx { color: var(--fg); }
 
 /* ── Sidebar footer ─────────────────────────────────────── */
 #sidebar-footer {
-  padding: 21px 30px;          /* was 14px 20px */
+  padding: 21px 30px 0px;          /* was 14px 20px */
   border-top: 1px solid var(--border);
   font-size: 17px;             /* was 11px */
 }
@@ -163,7 +162,7 @@ nav ul li a.active .idx { color: var(--fg); }
 }
 
 .sec-header h1 {
-  font-family: var(--font-vt);
+  font-family: var(--font-mono);
   font-size: 66px;             /* was 44px */
   font-weight: normal;
   letter-spacing: 2px;
@@ -234,11 +233,23 @@ nav ul li a.active .idx { color: var(--fg); }
   line-height: 1.4;
 }
 
+#work::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade8080;
+  margin-right: 6px;
+  margin-bottom: 2px;
+}
+
 /* ── Skills ─────────────────────────────────────────────── */
 .skills { margin-top: 54px; }  /* was 36px */
 
 .skills h2 {
-  font-family: var(--font-vt);
+  font-family: var(--font-mono);
   font-size: 33px;             /* was 22px */
   font-weight: normal;
   letter-spacing: 1px;
@@ -296,7 +307,7 @@ nav ul li a.active .idx { color: var(--fg); }
 .exp-co { font-size: 18px; }  /* was 12px */
 
 .exp-role {
-  font-family: var(--font-vt);
+  font-family: var(--font-mono);
   font-size: 35px;             /* was 23px */
   font-weight: normal;
   letter-spacing: 1px;
@@ -314,7 +325,7 @@ nav ul li a.active .idx { color: var(--fg); }
 /* ── Projects ───────────────────────────────────────────── */
 .proj-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 21px;                   /* was 14px */
 }
 
@@ -333,7 +344,7 @@ nav ul li a.active .idx { color: var(--fg); }
 }
 
 .proj-name {
-  font-family: var(--font-vt);
+  font-family: var(--font-mono);
   font-size: 33px;             /* was 22px */
   font-weight: normal;
   letter-spacing: 1px;
